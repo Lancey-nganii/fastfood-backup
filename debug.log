@@ -1,0 +1,1166 @@
+[17-Jun-2025 13:48:31] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:48:31] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:48:31] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 3
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:48:31] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 3
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 624.6
+)
+
+
+[17-Jun-2025 13:48:31] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 624.6
+)
+
+
+[17-Jun-2025 13:48:31] Current order_details auto_increment
+Data: Array
+(
+    [auto_increment] => 4
+    [table_status] => Array
+        (
+            [Name] => order_details
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 32768
+            [Data_free] => 0
+            [Auto_increment] => 4
+            [Create_time] => 2025-06-17 15:28:29
+            [Update_time] => 2025-06-17 19:46:10
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:48:31] Starting database transaction
+
+[17-Jun-2025 13:48:31] Transaction started successfully
+
+[17-Jun-2025 13:48:31] Table status before insert
+Data: Array
+(
+    [auto_increment] => 21
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 15
+            [Avg_row_length] => 1092
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 21
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:48:16
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:48:31] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 624.6
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:48:31] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 624.6
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:48:31] Order insert executed successfully
+
+[17-Jun-2025 13:48:31] Order ID retrieved
+Data: Array
+(
+    [order_id] => 21
+)
+
+
+[17-Jun-2025 13:48:31] Processing order items
+Data: Array
+(
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 3
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:48:31] Processing order item
+Data: Array
+(
+    [item_name] => Cheeseburger
+    [item_id] => 1
+    [quantity] => 2
+    [subtotal] => 198
+)
+
+
+[17-Jun-2025 13:48:31] Order detail inserted
+Data: Array
+(
+    [detail_id] => 4
+)
+
+
+[17-Jun-2025 13:48:31] Processing order item
+Data: Array
+(
+    [item_name] => Double Burger
+    [item_id] => 2
+    [quantity] => 3
+    [subtotal] => 447
+)
+
+
+[17-Jun-2025 13:48:31] Order detail inserted
+Data: Array
+(
+    [detail_id] => 5
+)
+
+
+[17-Jun-2025 13:48:31] Processing order item
+Data: Array
+(
+    [item_name] => Apple Pie
+    [item_id] => 8
+    [quantity] => 1
+    [subtotal] => 49
+)
+
+
+[17-Jun-2025 13:48:31] Order detail inserted
+Data: Array
+(
+    [detail_id] => 6
+)
+
+
+[17-Jun-2025 13:48:31] Transaction committed successfully
+Data: Array
+(
+    [order_id] => 21
+)
+
+
+[17-Jun-2025 13:49:03] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:49:03] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:49:03] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:49:03] Raw input data: Array
+(
+    [payment_method] => GCash
+    [discount] => PWD20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 119.2
+)
+
+
+[17-Jun-2025 13:49:03] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => GCash
+    [discount] => PWD20
+    [total_amount] => 119.2
+)
+
+
+[17-Jun-2025 13:49:03] Current order_details auto_increment
+Data: Array
+(
+    [auto_increment] => 7
+    [table_status] => Array
+        (
+            [Name] => order_details
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 3
+            [Avg_row_length] => 5461
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 32768
+            [Data_free] => 0
+            [Auto_increment] => 7
+            [Create_time] => 2025-06-17 15:28:29
+            [Update_time] => 2025-06-17 19:48:31
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:49:03] Starting database transaction
+
+[17-Jun-2025 13:49:03] Transaction started successfully
+
+[17-Jun-2025 13:49:03] Table status before insert
+Data: Array
+(
+    [auto_increment] => 22
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 16
+            [Avg_row_length] => 1024
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 22
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:48:31
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:49:03] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 119.2
+            [:payment_method] => GCash
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:49:03] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 119.2
+    [:payment_method] => GCash
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:49:03] Order insert executed successfully
+
+[17-Jun-2025 13:49:03] Order ID retrieved
+Data: Array
+(
+    [order_id] => 22
+)
+
+
+[17-Jun-2025 13:49:03] Processing order items
+Data: Array
+(
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:49:03] Processing order item
+Data: Array
+(
+    [item_name] => Double Burger
+    [item_id] => 2
+    [quantity] => 1
+    [subtotal] => 149
+)
+
+
+[17-Jun-2025 13:49:03] Order detail inserted
+Data: Array
+(
+    [detail_id] => 7
+)
+
+
+[17-Jun-2025 13:49:03] Transaction committed successfully
+Data: Array
+(
+    [order_id] => 22
+)
+
+
+[17-Jun-2025 13:50:28] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:50:28] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:50:28] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:50:28] Raw input data: Array
+(
+    [payment_method] => GCash
+    [discount] => SENIOR20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 79.2
+)
+
+
+[17-Jun-2025 13:50:28] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => GCash
+    [discount] => SENIOR20
+    [total_amount] => 79.2
+)
+
+
+[17-Jun-2025 13:50:28] Current order_details auto_increment
+Data: Array
+(
+    [auto_increment] => 8
+    [table_status] => Array
+        (
+            [Name] => order_details
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 4
+            [Avg_row_length] => 4096
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 32768
+            [Data_free] => 0
+            [Auto_increment] => 8
+            [Create_time] => 2025-06-17 15:28:29
+            [Update_time] => 2025-06-17 19:49:03
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:50:28] Starting database transaction
+
+[17-Jun-2025 13:50:28] Transaction started successfully
+
+[17-Jun-2025 13:50:28] Table status before insert
+Data: Array
+(
+    [auto_increment] => 23
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 17
+            [Avg_row_length] => 963
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 23
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:49:03
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:50:28] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 79.2
+            [:payment_method] => GCash
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:50:28] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 79.2
+    [:payment_method] => GCash
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:50:28] Order insert executed successfully
+
+[17-Jun-2025 13:50:28] Order ID retrieved
+Data: Array
+(
+    [order_id] => 23
+)
+
+
+[17-Jun-2025 13:50:28] Processing order items
+Data: Array
+(
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:50:28] Processing order item
+Data: Array
+(
+    [item_name] => Cheeseburger
+    [item_id] => 1
+    [quantity] => 1
+    [subtotal] => 99
+)
+
+
+[17-Jun-2025 13:50:28] Order detail inserted
+Data: Array
+(
+    [detail_id] => 8
+)
+
+
+[17-Jun-2025 13:50:28] Transaction committed successfully
+Data: Array
+(
+    [order_id] => 23
+)
+
+
+[17-Jun-2025 13:59:55] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:59:55] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:59:55] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:59:55] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 149
+)
+
+
+[17-Jun-2025 13:59:55] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 149
+)
+
+
+[17-Jun-2025 13:59:55] Current order_details auto_increment
+Data: Array
+(
+    [auto_increment] => 9
+    [table_status] => Array
+        (
+            [Name] => order_details
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 5
+            [Avg_row_length] => 3276
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 32768
+            [Data_free] => 0
+            [Auto_increment] => 9
+            [Create_time] => 2025-06-17 15:28:29
+            [Update_time] => 2025-06-17 19:50:28
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:59:55] Starting database transaction
+
+[17-Jun-2025 13:59:55] Transaction started successfully
+
+[17-Jun-2025 13:59:55] Table status before insert
+Data: Array
+(
+    [auto_increment] => 24
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 18
+            [Avg_row_length] => 910
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 24
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:50:28
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:59:55] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 149
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:59:55] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 149
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:59:55] Order insert executed successfully
+
+[17-Jun-2025 13:59:55] Order ID retrieved
+Data: Array
+(
+    [order_id] => 24
+)
+
+
+[17-Jun-2025 13:59:55] Processing order items
+Data: Array
+(
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:59:55] Processing order item
+Data: Array
+(
+    [item_name] => Double Burger
+    [item_id] => 2
+    [quantity] => 1
+    [subtotal] => 149
+)
+
+
+[17-Jun-2025 13:59:55] Order detail inserted
+Data: Array
+(
+    [detail_id] => 9
+)
+
+
+[17-Jun-2025 13:59:55] Transaction committed successfully
+Data: Array
+(
+    [order_id] => 24
+)
+
+
+[17-Jun-2025 14:00:14] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 14:00:14] POST data: Array
+(
+)
+
+
+[17-Jun-2025 14:00:14] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 14:00:14] Raw input data: Array
+(
+    [payment_method] => GCash
+    [discount] => PWD20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 118.4
+)
+
+
+[17-Jun-2025 14:00:14] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => GCash
+    [discount] => PWD20
+    [total_amount] => 118.4
+)
+
+
+[17-Jun-2025 14:00:14] Current order_details auto_increment
+Data: Array
+(
+    [auto_increment] => 10
+    [table_status] => Array
+        (
+            [Name] => order_details
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 6
+            [Avg_row_length] => 2730
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 32768
+            [Data_free] => 0
+            [Auto_increment] => 10
+            [Create_time] => 2025-06-17 15:28:29
+            [Update_time] => 2025-06-17 19:59:55
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 14:00:14] Starting database transaction
+
+[17-Jun-2025 14:00:14] Transaction started successfully
+
+[17-Jun-2025 14:00:14] Table status before insert
+Data: Array
+(
+    [auto_increment] => 25
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 19
+            [Avg_row_length] => 862
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 25
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:59:55
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 14:00:14] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 118.4
+            [:payment_method] => GCash
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 14:00:14] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 118.4
+    [:payment_method] => GCash
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 14:00:14] Order insert executed successfully
+
+[17-Jun-2025 14:00:14] Order ID retrieved
+Data: Array
+(
+    [order_id] => 25
+)
+
+
+[17-Jun-2025 14:00:14] Processing order items
+Data: Array
+(
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 14:00:14] Processing order item
+Data: Array
+(
+    [item_name] => Cheeseburger
+    [item_id] => 1
+    [quantity] => 1
+    [subtotal] => 99
+)
+
+
+[17-Jun-2025 14:00:14] Order detail inserted
+Data: Array
+(
+    [detail_id] => 10
+)
+
+
+[17-Jun-2025 14:00:14] Processing order item
+Data: Array
+(
+    [item_name] => Apple Pie
+    [item_id] => 8
+    [quantity] => 1
+    [subtotal] => 49
+)
+
+
+[17-Jun-2025 14:00:14] Order detail inserted
+Data: Array
+(
+    [detail_id] => 11
+)
+
+
+[17-Jun-2025 14:00:14] Transaction committed successfully
+Data: Array
+(
+    [order_id] => 25
+)
+
+

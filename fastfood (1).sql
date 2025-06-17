@@ -223,8 +223,10 @@ CREATE TABLE `order` (
   `customer_id` int(11) NOT NULL,
   `employee_id` int(11) DEFAULT NULL,
   `order_date` datetime NOT NULL DEFAULT current_timestamp(),
-  `order_status` varchar(50) NOT NULL DEFAULT 'Pending',
+  `status` varchar(50) NOT NULL DEFAULT 'Pending',
   `total_amount` decimal(10,2) NOT NULL
+  `payment_method` varchar(50) NOT NULL,
+  `discount` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

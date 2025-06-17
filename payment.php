@@ -47,6 +47,7 @@ if (empty($itemDetails)) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Payment</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <style>
     :root {
       --sidebar-width: 220px;
@@ -254,7 +255,9 @@ if (empty($itemDetails)) {
         <div class="total" id="totalAmount">Total: ₱0.00</div>
       </div>
 
-      <button type="button" onclick="confirmPayment()">Confirm Payment</button>
+      <button type="button" id="submitPayment" onclick="confirmPayment()">
+        <i class="fa fa-credit-card"></i> Confirm Payment
+      </button>
     </div>
 
     <div class="receipt-card hidden" id="receiptCard">
@@ -350,19 +353,43 @@ if (empty($itemDetails)) {
         total_amount: parseFloat(document.getElementById("receiptTotal").textContent.replace(/[^\d.]/g, ''))
       };
 
+      // Show loading state
+      const submitBtn = document.getElementById('submitPayment');
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Processing...';
+
       fetch("process-payment.php", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "X-Requested-With": "XMLHttpRequest"
+        },
         body: JSON.stringify(payload)
       })
-      .then(res => res.json())
-      .then(data => {
-        if (data.status === "success") {
-          // Redirect to receipt page with order_id as a GET parameter
-          window.location.href = "receipt.php?order_id=" + encodeURIComponent(data.order_id);
-        } else {
-          alert("Payment failed. Please try again.");
+      .then(async (response) => {
+        const data = await response.json();
+        
+        if (!response.ok) {
+          // Handle HTTP error status codes
+          throw new Error(data.message || 'Payment failed');
         }
+        
+        if (data.status === 'success' && data.data.redirect) {
+          // Redirect to receipt page on success
+          window.location.href = data.data.redirect;
+        } else {
+          throw new Error(data.message || 'Invalid response from server');
+        }
+      })
+      .catch(error => {
+        console.error('Payment error:', error);
+        alert(error.message || 'An error occurred during payment. Please try again.');
+      })
+      .finally(() => {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
       });
     }
 

@@ -1,0 +1,4595 @@
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Starting payment processing
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Session data
+Data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] User ID from session
+Data: Array
+(
+    [user_id] => 0
+)
+
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Using hardcoded user ID
+Data: Array
+(
+    [user_id] => 1
+)
+
+
+[17-Jun-2025 12:22:25 Europe/Berlin] Starting payment processing for user: 1
+[17-Jun-2025 12:22:25 Europe/Berlin] Total amount: 396
+[17-Jun-2025 12:22:25 Europe/Berlin] Payment method: Cash on Delivery
+[17-Jun-2025 12:22:25 Europe/Berlin] Discount: NONE
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Starting database transaction
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Transaction started successfully
+
+[17-Jun-2025 12:22:25 Europe/Berlin] Next auto_increment value before insert: 9
+[17-Jun-2025 12:22:25 Europe/Berlin] Executing SQL: INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Paid', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+[17-Jun-2025 12:22:25 Europe/Berlin] With params: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 396
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Paid', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 396
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Statement executed
+Data: Array
+(
+    [result] => 1
+)
+
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Last insert ID
+Data: Array
+(
+    [order_id] => 9
+)
+
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:233
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(233): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:22:25 Europe/Berlin] [2025-06-17 12:22:25] Transaction rolled back
+
+[17-Jun-2025 12:22:25 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:22:25 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Starting payment processing
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Session data
+Data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] User ID from session
+Data: Array
+(
+    [user_id] => 0
+)
+
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Using hardcoded user ID
+Data: Array
+(
+    [user_id] => 1
+)
+
+
+[17-Jun-2025 12:22:30 Europe/Berlin] Starting payment processing for user: 1
+[17-Jun-2025 12:22:30 Europe/Berlin] Total amount: 396
+[17-Jun-2025 12:22:30 Europe/Berlin] Payment method: Cash on Delivery
+[17-Jun-2025 12:22:30 Europe/Berlin] Discount: NONE
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Starting database transaction
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Transaction started successfully
+
+[17-Jun-2025 12:22:30 Europe/Berlin] Next auto_increment value before insert: 10
+[17-Jun-2025 12:22:30 Europe/Berlin] Executing SQL: INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Paid', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+[17-Jun-2025 12:22:30 Europe/Berlin] With params: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 396
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Paid', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 396
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Statement executed
+Data: Array
+(
+    [result] => 1
+)
+
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Last insert ID
+Data: Array
+(
+    [order_id] => 10
+)
+
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:233
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(233): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:22:30 Europe/Berlin] [2025-06-17 12:22:30] Transaction rolled back
+
+[17-Jun-2025 12:22:30 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:22:30 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Starting payment processing
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Session data
+Data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] User ID from session
+Data: Array
+(
+    [user_id] => 0
+)
+
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Using hardcoded user ID
+Data: Array
+(
+    [user_id] => 1
+)
+
+
+[17-Jun-2025 12:22:31 Europe/Berlin] Starting payment processing for user: 1
+[17-Jun-2025 12:22:31 Europe/Berlin] Total amount: 396
+[17-Jun-2025 12:22:31 Europe/Berlin] Payment method: Cash on Delivery
+[17-Jun-2025 12:22:31 Europe/Berlin] Discount: NONE
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Starting database transaction
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Transaction started successfully
+
+[17-Jun-2025 12:22:31 Europe/Berlin] Next auto_increment value before insert: 11
+[17-Jun-2025 12:22:31 Europe/Berlin] Executing SQL: INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Paid', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+[17-Jun-2025 12:22:31 Europe/Berlin] With params: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 396
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Paid', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 396
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Statement executed
+Data: Array
+(
+    [result] => 1
+)
+
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Last insert ID
+Data: Array
+(
+    [order_id] => 11
+)
+
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:233
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(233): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:22:31 Europe/Berlin] [2025-06-17 12:22:31] Transaction rolled back
+
+[17-Jun-2025 12:22:31 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:22:31 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 396
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 396
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Using hardcoded user ID
+Data: Array
+(
+    [user_id] => 1
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] Starting payment processing for user: 1
+[17-Jun-2025 12:30:44 Europe/Berlin] Total amount: 396
+[17-Jun-2025 12:30:44 Europe/Berlin] Payment method: Cash on Delivery
+[17-Jun-2025 12:30:44 Europe/Berlin] Discount: NONE
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Starting database transaction
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Transaction started successfully
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Table status before insert
+Data: Array
+(
+    [auto_increment] => 1
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 1
+            [Create_time] => 2025-06-17 18:05:38
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Table structure
+Data: Array
+(
+    [create_table] => CREATE TABLE `order` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_id` int(11) NOT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `order_date` datetime NOT NULL DEFAULT current_timestamp(),
+  `status` varchar(50) NOT NULL DEFAULT 'Pending',
+  `total_amount` decimal(10,2) NOT NULL,
+  `payment_method` varchar(50) NOT NULL,
+  `discount` decimal(10,2) NOT NULL DEFAULT 0.00,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Attempting test insert...
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Test insert successful
+Data: Array
+(
+    [test_id] => 1
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Test record deleted
+
+[17-Jun-2025 12:30:44 Europe/Berlin] Executing SQL: INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+[17-Jun-2025 12:30:44 Europe/Berlin] With params: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 396
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 396
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 396
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Order insert executed successfully
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Last insert ID (lastInsertId)
+Data: Array
+(
+    [order_id] => 2
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:283
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(283): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:30:44 Europe/Berlin] [2025-06-17 12:30:44] Transaction rolled back
+
+[17-Jun-2025 12:30:44 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:30:44 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 396
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 396
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Using hardcoded user ID
+Data: Array
+(
+    [user_id] => 1
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] Starting payment processing for user: 1
+[17-Jun-2025 12:30:47 Europe/Berlin] Total amount: 396
+[17-Jun-2025 12:30:47 Europe/Berlin] Payment method: Cash on Delivery
+[17-Jun-2025 12:30:47 Europe/Berlin] Discount: NONE
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Starting database transaction
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Transaction started successfully
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Table status before insert
+Data: Array
+(
+    [auto_increment] => 3
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 3
+            [Create_time] => 2025-06-17 18:05:38
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Table structure
+Data: Array
+(
+    [create_table] => CREATE TABLE `order` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `customer_id` int(11) NOT NULL,
+  `employee_id` int(11) DEFAULT NULL,
+  `order_date` datetime NOT NULL DEFAULT current_timestamp(),
+  `status` varchar(50) NOT NULL DEFAULT 'Pending',
+  `total_amount` decimal(10,2) NOT NULL,
+  `payment_method` varchar(50) NOT NULL,
+  `discount` decimal(10,2) NOT NULL DEFAULT 0.00,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Attempting test insert...
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Test insert successful
+Data: Array
+(
+    [test_id] => 3
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Test record deleted
+
+[17-Jun-2025 12:30:47 Europe/Berlin] Executing SQL: INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+[17-Jun-2025 12:30:47 Europe/Berlin] With params: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 396
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 396
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 396
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Order insert executed successfully
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Last insert ID (lastInsertId)
+Data: Array
+(
+    [order_id] => 4
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:283
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(283): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:30:47 Europe/Berlin] [2025-06-17 12:30:47] Transaction rolled back
+
+[17-Jun-2025 12:30:47 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:30:47 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 396
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 396
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Starting database transaction
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Transaction started successfully
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Table status before insert
+Data: Array
+(
+    [auto_increment] => 5
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 5
+            [Create_time] => 2025-06-17 18:05:38
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 396
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 396
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Order insert executed successfully
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Order ID retrieved
+Data: Array
+(
+    [order_id] => 5
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:36:25 Europe/Berlin] [2025-06-17 12:36:25] Transaction rolled back
+
+[17-Jun-2025 12:36:25 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:36:25 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Starting database transaction
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Transaction started successfully
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Table status before insert
+Data: Array
+(
+    [auto_increment] => 6
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 6
+            [Create_time] => 2025-06-17 18:05:38
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 490.5
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 490.5
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Order insert executed successfully
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Order ID retrieved
+Data: Array
+(
+    [order_id] => 6
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:38:03 Europe/Berlin] [2025-06-17 12:38:03] Transaction rolled back
+
+[17-Jun-2025 12:38:03 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:38:03 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => SENIOR20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 392.4
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => SENIOR20
+    [total_amount] => 392.4
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Starting database transaction
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Transaction started successfully
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Table status before insert
+Data: Array
+(
+    [auto_increment] => 7
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 7
+            [Create_time] => 2025-06-17 18:05:38
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 392.4
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 392.4
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Order insert executed successfully
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Order ID retrieved
+Data: Array
+(
+    [order_id] => 7
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:38:12 Europe/Berlin] [2025-06-17 12:38:12] Transaction rolled back
+
+[17-Jun-2025 12:38:12 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:38:12 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Raw input data: Array
+(
+    [payment_method] => Credit Card
+    [discount] => SENIOR20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 392.4
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Credit Card
+    [discount] => SENIOR20
+    [total_amount] => 392.4
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Starting database transaction
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Transaction started successfully
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Table status before insert
+Data: Array
+(
+    [auto_increment] => 8
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 8
+            [Create_time] => 2025-06-17 18:05:38
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 392.4
+            [:payment_method] => Credit Card
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 392.4
+    [:payment_method] => Credit Card
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Order insert executed successfully
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Order ID retrieved
+Data: Array
+(
+    [order_id] => 8
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:38:16 Europe/Berlin] [2025-06-17 12:38:16] Transaction rolled back
+
+[17-Jun-2025 12:38:16 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:38:16 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => PWD20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 392.4
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => PWD20
+    [total_amount] => 392.4
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Starting database transaction
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Transaction started successfully
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Table status before insert
+Data: Array
+(
+    [auto_increment] => 1
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 1
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 392.4
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 392.4
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Order insert executed successfully
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Order ID retrieved
+Data: Array
+(
+    [order_id] => 1
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:48:41 Europe/Berlin] [2025-06-17 12:48:41] Transaction rolled back
+
+[17-Jun-2025 12:48:41 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:48:41 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Starting database transaction
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Transaction started successfully
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Table status before insert
+Data: Array
+(
+    [auto_increment] => 2
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 2
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 490.5
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 490.5
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Order insert executed successfully
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Order ID retrieved
+Data: Array
+(
+    [order_id] => 2
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:48:46 Europe/Berlin] [2025-06-17 12:48:46] Transaction rolled back
+
+[17-Jun-2025 12:48:46 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:48:46 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Starting database transaction
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Transaction started successfully
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Table status before insert
+Data: Array
+(
+    [auto_increment] => 3
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 3
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 490.5
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 490.5
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Order insert executed successfully
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Order ID retrieved
+Data: Array
+(
+    [order_id] => 3
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:48:51 Europe/Berlin] [2025-06-17 12:48:51] Transaction rolled back
+
+[17-Jun-2025 12:48:51 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:48:51 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Raw input data: Array
+(
+    [payment_method] => GCash
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => GCash
+    [discount] => NONE
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Starting database transaction
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Transaction started successfully
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Table status before insert
+Data: Array
+(
+    [auto_increment] => 4
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 4
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 490.5
+            [:payment_method] => GCash
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 490.5
+    [:payment_method] => GCash
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Order insert executed successfully
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Order ID retrieved
+Data: Array
+(
+    [order_id] => 4
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:48:54 Europe/Berlin] [2025-06-17 12:48:54] Transaction rolled back
+
+[17-Jun-2025 12:48:54 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:48:54 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Raw input data: Array
+(
+    [payment_method] => Credit Card
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Credit Card
+    [discount] => NONE
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Starting database transaction
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Transaction started successfully
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Table status before insert
+Data: Array
+(
+    [auto_increment] => 5
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 5
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 490.5
+            [:payment_method] => Credit Card
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 490.5
+    [:payment_method] => Credit Card
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Order insert executed successfully
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Order ID retrieved
+Data: Array
+(
+    [order_id] => 5
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:48:57 Europe/Berlin] [2025-06-17 12:48:57] Transaction rolled back
+
+[17-Jun-2025 12:48:57 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:48:57 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] POST data: Array
+(
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Raw input data: Array
+(
+    [payment_method] => Credit Card
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Credit Card
+    [discount] => NONE
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Starting database transaction
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Transaction started successfully
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Table status before insert
+Data: Array
+(
+    [auto_increment] => 6
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 0
+            [Avg_row_length] => 0
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 6
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 490.5
+            [:payment_method] => Credit Card
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 490.5
+    [:payment_method] => Credit Card
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Order insert executed successfully
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Order ID retrieved
+Data: Array
+(
+    [order_id] => 6
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 12:52:24 Europe/Berlin] [2025-06-17 12:52:24] Transaction rolled back
+
+[17-Jun-2025 12:52:24 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 12:52:24 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Starting database transaction
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Transaction started successfully
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Table status before insert
+Data: Array
+(
+    [auto_increment] => 8
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 1
+            [Avg_row_length] => 16384
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 8
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 18:55:42
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 490.5
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 490.5
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Order insert executed successfully
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Order ID retrieved
+Data: Array
+(
+    [order_id] => 8
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 13:17:27 Europe/Berlin] [2025-06-17 13:17:27] Transaction rolled back
+
+[17-Jun-2025 13:17:27 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 13:17:27 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 2
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 2
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 490.5
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Starting database transaction
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Transaction started successfully
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Table status before insert
+Data: Array
+(
+    [auto_increment] => 9
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 1
+            [Avg_row_length] => 16384
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 9
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:21:11
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 490.5
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 490.5
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Order insert executed successfully
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Order ID retrieved
+Data: Array
+(
+    [order_id] => 9
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 13:21:28 Europe/Berlin] [2025-06-17 13:21:28] Transaction rolled back
+
+[17-Jun-2025 13:21:28 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 13:21:28 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 3
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 3
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 624.6
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 624.6
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Starting database transaction
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Transaction started successfully
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Table status before insert
+Data: Array
+(
+    [auto_increment] => 9
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 1
+            [Avg_row_length] => 16384
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 9
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:21:32
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 624.6
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 624.6
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Order insert executed successfully
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Order ID retrieved
+Data: Array
+(
+    [order_id] => 9
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 13:21:38 Europe/Berlin] [2025-06-17 13:21:38] Transaction rolled back
+
+[17-Jun-2025 13:21:38 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 13:21:38 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 3
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 3
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 624.6
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 624.6
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Starting database transaction
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Transaction started successfully
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Table status before insert
+Data: Array
+(
+    [auto_increment] => 22
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 13
+            [Avg_row_length] => 1260
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 22
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:22:22
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 624.6
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 624.6
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Order insert executed successfully
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Order ID retrieved
+Data: Array
+(
+    [order_id] => 22
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 13:22:56 Europe/Berlin] [2025-06-17 13:22:56] Transaction rolled back
+
+[17-Jun-2025 13:22:56 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 13:22:56 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 3
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 3
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 624.6
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Processing order
+Data: Array
+(
+    [user_id] => 1
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [total_amount] => 624.6
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Starting database transaction
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Transaction started successfully
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Table status before insert
+Data: Array
+(
+    [auto_increment] => 23
+    [table_status] => Array
+        (
+            [Name] => order
+            [Engine] => InnoDB
+            [Version] => 10
+            [Row_format] => Dynamic
+            [Rows] => 13
+            [Avg_row_length] => 1260
+            [Data_length] => 16384
+            [Max_data_length] => 0
+            [Index_length] => 0
+            [Data_free] => 0
+            [Auto_increment] => 23
+            [Create_time] => 2025-06-17 18:48:09
+            [Update_time] => 2025-06-17 19:22:22
+            [Check_time] => 
+            [Collation] => utf8mb4_general_ci
+            [Checksum] => 
+            [Create_options] => 
+            [Comment] => 
+            [Max_index_length] => 0
+            [Temporary] => N
+        )
+
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Preparing SQL
+Data: Array
+(
+    [sql] => INSERT INTO `order` (
+                    customer_id, 
+                    employee_id, 
+                    order_date, 
+                    status, 
+                    total_amount, 
+                    payment_method, 
+                    discount
+                ) VALUES (
+                    :customer_id, 
+                    NULL, 
+                    NOW(), 
+                    'Pending', 
+                    :total_amount, 
+                    :payment_method, 
+                    :discount
+                )
+    [params] => Array
+        (
+            [:customer_id] => 1
+            [:total_amount] => 624.6
+            [:payment_method] => Cash on Delivery
+            [:discount] => 0
+        )
+
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Executing order insert
+Data: Array
+(
+    [:customer_id] => 1
+    [:total_amount] => 624.6
+    [:payment_method] => Cash on Delivery
+    [:discount] => 0
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Order insert executed successfully
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Order ID retrieved
+Data: Array
+(
+    [order_id] => 23
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Error in transaction
+Data: Array
+(
+    [error] => SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+    [file] => C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php:242
+    [trace] => #0 C:\Users\Lance\OneDrive\Desktop\fastfood\process-payment.php(242): PDOStatement->execute(Array)
+#1 {main}
+)
+
+
+[17-Jun-2025 13:23:43 Europe/Berlin] [2025-06-17 13:23:43] Transaction rolled back
+
+[17-Jun-2025 13:23:43 Europe/Berlin] Sending response - Status: 500, Message: Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+[17-Jun-2025 13:23:43 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:25:00 Europe/Berlin] [2025-06-17 13:25:00] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:25:00 Europe/Berlin] [2025-06-17 13:25:00] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:25:00 Europe/Berlin] [2025-06-17 13:25:00] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 3
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:25:00 Europe/Berlin] [2025-06-17 13:25:00] Raw input data: 
+
+[17-Jun-2025 13:25:00 Europe/Berlin] [2025-06-17 13:25:00] No items in cart
+
+[17-Jun-2025 13:25:00 Europe/Berlin] Sending response - Status: 400, Message: Cart is empty
+[17-Jun-2025 13:25:00 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:25:27 Europe/Berlin] [2025-06-17 13:25:27] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:25:27 Europe/Berlin] [2025-06-17 13:25:27] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:25:27 Europe/Berlin] [2025-06-17 13:25:27] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 3
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:25:27 Europe/Berlin] [2025-06-17 13:25:27] Raw input data: 
+
+[17-Jun-2025 13:25:27 Europe/Berlin] [2025-06-17 13:25:27] No items in cart
+
+[17-Jun-2025 13:25:27 Europe/Berlin] Sending response - Status: 400, Message: Cart is empty
+[17-Jun-2025 13:25:27 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:29:53 Europe/Berlin] [2025-06-17 13:29:53] === NEW PAYMENT REQUEST ===
+
+[17-Jun-2025 13:29:53 Europe/Berlin] [2025-06-17 13:29:53] POST data: Array
+(
+)
+
+
+[17-Jun-2025 13:29:53 Europe/Berlin] [2025-06-17 13:29:53] Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 3
+                )
+
+        )
+
+)
+
+
+[17-Jun-2025 13:29:53 Europe/Berlin] [2025-06-17 13:29:53] Raw input data: 
+
+[17-Jun-2025 13:29:53 Europe/Berlin] [2025-06-17 13:29:53] No items in cart
+
+[17-Jun-2025 13:29:53 Europe/Berlin] Sending response - Status: 400, Message: Cart is empty
+[17-Jun-2025 13:29:53 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+            [2] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 3
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 2
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 3
+                )
+
+            [2] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 624.6
+)
+ - []
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 624.6
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 4,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 0,
+        "Avg_row_length": 0,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 4,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 19:46:10",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 21,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 15,
+        "Avg_row_length": 1092,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 21,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 19:48:16",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 624.6,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 624.6,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "21"
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": 2
+        },
+        {
+            "ItemName": "Double Burger",
+            "ItemPrice": "149.00",
+            "ItemQuantity": 3
+        },
+        {
+            "ItemName": "Apple Pie",
+            "ItemPrice": "49.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": 2,
+    "subtotal": 198
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "4"
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Double Burger",
+    "item_id": 2,
+    "quantity": 3,
+    "subtotal": 447
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "5"
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Apple Pie",
+    "item_id": 8,
+    "quantity": "1",
+    "subtotal": 49
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "6"
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] DEBUG: Transaction committed successfully - {
+    "order_id": "21"
+}
+[17-Jun-2025 13:48:31 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 13:48:31 Europe/Berlin] Response data: Array
+(
+    [order_id] => 21
+    [redirect] => receipt.php?order_id=21
+)
+
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => GCash
+    [discount] => PWD20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 119.2
+)
+ - []
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "GCash",
+    "discount": "PWD20",
+    "total_amount": 119.2
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 7,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 3,
+        "Avg_row_length": 5461,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 7,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 19:48:31",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 22,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 16,
+        "Avg_row_length": 1024,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 22,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 19:48:31",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 119.2,
+        ":payment_method": "GCash",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 119.2,
+    ":payment_method": "GCash",
+    ":discount": 0
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "22"
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Double Burger",
+            "ItemPrice": "149.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Double Burger",
+    "item_id": 2,
+    "quantity": "1",
+    "subtotal": 149
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "7"
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] DEBUG: Transaction committed successfully - {
+    "order_id": "22"
+}
+[17-Jun-2025 13:49:03 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 13:49:03 Europe/Berlin] Response data: Array
+(
+    [order_id] => 22
+    [redirect] => receipt.php?order_id=22
+)
+
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => GCash
+    [discount] => SENIOR20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 79.2
+)
+ - []
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "GCash",
+    "discount": "SENIOR20",
+    "total_amount": 79.2
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 8,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 4,
+        "Avg_row_length": 4096,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 8,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 19:49:03",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 23,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 17,
+        "Avg_row_length": 963,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 23,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 19:49:03",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 79.2,
+        ":payment_method": "GCash",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 79.2,
+    ":payment_method": "GCash",
+    ":discount": 0
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "23"
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": "1",
+    "subtotal": 99
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "8"
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] DEBUG: Transaction committed successfully - {
+    "order_id": "23"
+}
+[17-Jun-2025 13:50:28 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 13:50:28 Europe/Berlin] Response data: Array
+(
+    [order_id] => 23
+    [redirect] => receipt.php?order_id=23
+)
+
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 149
+)
+ - []
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 149
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 9,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 5,
+        "Avg_row_length": 3276,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 9,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 19:50:28",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 24,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 18,
+        "Avg_row_length": 910,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 24,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 19:50:28",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 149,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 149,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "24"
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Double Burger",
+            "ItemPrice": "149.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Double Burger",
+    "item_id": 2,
+    "quantity": "1",
+    "subtotal": 149
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "9"
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] DEBUG: Transaction committed successfully - {
+    "order_id": "24"
+}
+[17-Jun-2025 13:59:55 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 13:59:55 Europe/Berlin] Response data: Array
+(
+    [order_id] => 24
+    [redirect] => receipt.php?order_id=24
+)
+
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+            [1] => Array
+                (
+                    [item_id] => 8
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => GCash
+    [discount] => PWD20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+            [1] => Array
+                (
+                    [ItemName] => Apple Pie
+                    [ItemPrice] => 49.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 118.4
+)
+ - []
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "GCash",
+    "discount": "PWD20",
+    "total_amount": 118.4
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 10,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 6,
+        "Avg_row_length": 2730,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 10,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 19:59:55",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 25,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 19,
+        "Avg_row_length": 862,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 25,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 19:59:55",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 118.4,
+        ":payment_method": "GCash",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 118.4,
+    ":payment_method": "GCash",
+    ":discount": 0
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "25"
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": "1"
+        },
+        {
+            "ItemName": "Apple Pie",
+            "ItemPrice": "49.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": "1",
+    "subtotal": 99
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "10"
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Apple Pie",
+    "item_id": 8,
+    "quantity": "1",
+    "subtotal": 49
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "11"
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] DEBUG: Transaction committed successfully - {
+    "order_id": "25"
+}
+[17-Jun-2025 14:00:14 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 14:00:14 Europe/Berlin] Response data: Array
+(
+    [order_id] => 25
+    [redirect] => receipt.php?order_id=25
+)
+
