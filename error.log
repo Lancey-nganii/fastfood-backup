@@ -4593,3 +4593,1452 @@ Data: Array
     [redirect] => receipt.php?order_id=25
 )
 
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 99
+)
+ - []
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 99
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 12,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 8,
+        "Avg_row_length": 2048,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 12,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:00:14",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 26,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 20,
+        "Avg_row_length": 819,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 26,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:00:14",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 99,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 99,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "26"
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": "1",
+    "subtotal": 99
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "12"
+}
+[17-Jun-2025 14:17:28 Europe/Berlin] Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+[17-Jun-2025 14:17:28 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 14:17:28 Europe/Berlin] Response data: Array
+(
+    [order_id] => 26
+    [receipt_url] => generate_receipt.php?order_id=26
+    [receipt_html] => Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+)
+
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 2
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 149
+)
+ - []
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 149
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 13,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 9,
+        "Avg_row_length": 1820,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 13,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:17:28",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 27,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 21,
+        "Avg_row_length": 780,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 27,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:17:28",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 149,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 149,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "27"
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Double Burger",
+            "ItemPrice": "149.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Double Burger",
+    "item_id": 2,
+    "quantity": "1",
+    "subtotal": 149
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "13"
+}
+[17-Jun-2025 14:23:17 Europe/Berlin] Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+[17-Jun-2025 14:23:17 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 14:23:17 Europe/Berlin] Response data: Array
+(
+    [order_id] => 27
+    [receipt_url] => generate_receipt.php?order_id=27
+    [receipt_html] => Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+)
+
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+)
+ - []
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 149
+)
+ - []
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 149
+}
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 14,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 10,
+        "Avg_row_length": 1638,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 14,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:23:17",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 28,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 22,
+        "Avg_row_length": 744,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 28,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:23:17",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Error in transaction - {
+    "error": "Duplicate order detected. Please wait before placing another order.",
+    "file": "C:\\Users\\Lance\\OneDrive\\Desktop\\fastfood\\process-payment.php:190",
+    "trace": "#0 {main}"
+}
+[17-Jun-2025 14:23:20 Europe/Berlin] DEBUG: Transaction rolled back - []
+[17-Jun-2025 14:23:20 Europe/Berlin] Sending response - Status: 500, Message: Error: Duplicate order detected. Please wait before placing another order.
+[17-Jun-2025 14:23:20 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+)
+ - []
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => GCash
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Double Burger
+                    [ItemPrice] => 149.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 149
+)
+ - []
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "GCash",
+    "discount": "NONE",
+    "total_amount": 149
+}
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 14,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 10,
+        "Avg_row_length": 1638,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 14,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:23:17",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 28,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 22,
+        "Avg_row_length": 744,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 28,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:23:17",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Error in transaction - {
+    "error": "Duplicate order detected. Please wait before placing another order.",
+    "file": "C:\\Users\\Lance\\OneDrive\\Desktop\\fastfood\\process-payment.php:190",
+    "trace": "#0 {main}"
+}
+[17-Jun-2025 14:23:29 Europe/Berlin] DEBUG: Transaction rolled back - []
+[17-Jun-2025 14:23:29 Europe/Berlin] Sending response - Status: 500, Message: Error: Duplicate order detected. Please wait before placing another order.
+[17-Jun-2025 14:23:29 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 7
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => SENIOR20
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Sundae
+                    [ItemPrice] => 59.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 47.2
+)
+ - []
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "SENIOR20",
+    "total_amount": 47.2
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 14,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 10,
+        "Avg_row_length": 1638,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 14,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:23:17",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 28,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 22,
+        "Avg_row_length": 744,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 28,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:23:17",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 47.2,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 47.2,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "28"
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Sundae",
+            "ItemPrice": "59.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Sundae",
+    "item_id": 7,
+    "quantity": "1",
+    "subtotal": 59
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "14"
+}
+[17-Jun-2025 14:25:39 Europe/Berlin] Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+[17-Jun-2025 14:25:39 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 14:25:39 Europe/Berlin] Response data: Array
+(
+    [order_id] => 28
+    [receipt_url] => generate_receipt.php?order_id=28
+    [receipt_html] => Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+)
+
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 99
+)
+ - []
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 99
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 15,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 11,
+        "Avg_row_length": 1489,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 15,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:25:39",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 29,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 23,
+        "Avg_row_length": 712,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 29,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:25:39",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 99,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 99,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "29"
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": "1",
+    "subtotal": 99
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "15"
+}
+[17-Jun-2025 14:26:45 Europe/Berlin] Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+[17-Jun-2025 14:26:45 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 14:26:45 Europe/Berlin] Response data: Array
+(
+    [order_id] => 29
+    [receipt_url] => generate_receipt.php?order_id=29
+    [receipt_html] => Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+)
+
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 99
+)
+ - []
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 99
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 16,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 12,
+        "Avg_row_length": 1365,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 16,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:26:45",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 30,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 24,
+        "Avg_row_length": 682,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 30,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:26:45",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 99,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 99,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "30"
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": "1",
+    "subtotal": 99
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "16"
+}
+[17-Jun-2025 14:50:19 Europe/Berlin] Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+[17-Jun-2025 14:50:19 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 14:50:19 Europe/Berlin] Response data: Array
+(
+    [order_id] => 30
+    [receipt_url] => generate_receipt.php?order_id=30
+    [receipt_html] => Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+)
+
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 99
+)
+ - []
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 99
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 17,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 13,
+        "Avg_row_length": 1260,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 17,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:50:19",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 31,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 25,
+        "Avg_row_length": 655,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 31,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:50:19",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 99,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 99,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "31"
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": "1",
+    "subtotal": 99
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "17"
+}
+[17-Jun-2025 14:52:37 Europe/Berlin] Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+[17-Jun-2025 14:52:37 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 14:52:37 Europe/Berlin] Response data: Array
+(
+    [order_id] => 31
+    [receipt_url] => generate_receipt.php?order_id=31
+    [receipt_html] => Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+)
+
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+)
+ - []
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 99
+)
+ - []
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 99
+}
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 18,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 14,
+        "Avg_row_length": 1170,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 18,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:52:37",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 32,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 26,
+        "Avg_row_length": 630,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 32,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:52:37",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Error in transaction - {
+    "error": "Duplicate order detected. Please wait before placing another order.",
+    "file": "C:\\Users\\Lance\\OneDrive\\Desktop\\fastfood\\process-payment.php:190",
+    "trace": "#0 {main}"
+}
+[17-Jun-2025 14:52:40 Europe/Berlin] DEBUG: Transaction rolled back - []
+[17-Jun-2025 14:52:40 Europe/Berlin] Sending response - Status: 500, Message: Error: Duplicate order detected. Please wait before placing another order.
+[17-Jun-2025 14:52:40 Europe/Berlin] Response data: Array
+(
+)
+
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 99
+)
+ - []
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 99
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 18,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 14,
+        "Avg_row_length": 1170,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 18,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 20:52:37",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 32,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 26,
+        "Avg_row_length": 630,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 32,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 20:52:37",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 99,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 99,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "32"
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": "1",
+    "subtotal": 99
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "18"
+}
+[17-Jun-2025 15:03:59 Europe/Berlin] Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+[17-Jun-2025 15:03:59 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 15:03:59 Europe/Berlin] Response data: Array
+(
+    [order_id] => 32
+    [receipt_url] => generate_receipt.php?order_id=32
+    [receipt_html] => Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+)
+
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: === NEW PAYMENT REQUEST === - []
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: POST data: Array
+(
+)
+ - []
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Session data: Array
+(
+    [user_id] => 0
+    [username] => 
+    [role] => customer
+    [cart] => Array
+        (
+            [0] => Array
+                (
+                    [item_id] => 1
+                    [quantity] => 1
+                )
+
+        )
+
+)
+ - []
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Raw input data: Array
+(
+    [payment_method] => Cash on Delivery
+    [discount] => NONE
+    [items] => Array
+        (
+            [0] => Array
+                (
+                    [ItemName] => Cheeseburger
+                    [ItemPrice] => 99.00
+                    [ItemQuantity] => 1
+                )
+
+        )
+
+    [total_amount] => 99
+)
+ - []
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Processing order - {
+    "user_id": 1,
+    "payment_method": "Cash on Delivery",
+    "discount": "NONE",
+    "total_amount": 99
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Current order_details auto_increment - {
+    "auto_increment": 19,
+    "table_status": {
+        "Name": "order_details",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 15,
+        "Avg_row_length": 1092,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 32768,
+        "Data_free": 0,
+        "Auto_increment": 19,
+        "Create_time": "2025-06-17 15:28:29",
+        "Update_time": "2025-06-17 21:03:59",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Starting database transaction - []
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Transaction started successfully - []
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Table status before insert - {
+    "auto_increment": 33,
+    "table_status": {
+        "Name": "order",
+        "Engine": "InnoDB",
+        "Version": 10,
+        "Row_format": "Dynamic",
+        "Rows": 27,
+        "Avg_row_length": 606,
+        "Data_length": 16384,
+        "Max_data_length": 0,
+        "Index_length": 0,
+        "Data_free": 0,
+        "Auto_increment": 33,
+        "Create_time": "2025-06-17 18:48:09",
+        "Update_time": "2025-06-17 21:03:59",
+        "Check_time": null,
+        "Collation": "utf8mb4_general_ci",
+        "Checksum": null,
+        "Create_options": "",
+        "Comment": "",
+        "Max_index_length": 0,
+        "Temporary": "N"
+    }
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Preparing SQL - {
+    "sql": "INSERT INTO `order` (\n                    customer_id, \n                    employee_id, \n                    order_date, \n                    status, \n                    total_amount, \n                    payment_method, \n                    discount\n                ) VALUES (\n                    :customer_id, \n                    NULL, \n                    NOW(), \n                    'Pending', \n                    :total_amount, \n                    :payment_method, \n                    :discount\n                )",
+    "params": {
+        ":customer_id": 1,
+        ":total_amount": 99,
+        ":payment_method": "Cash on Delivery",
+        ":discount": 0
+    }
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Executing order insert - {
+    ":customer_id": 1,
+    ":total_amount": 99,
+    ":payment_method": "Cash on Delivery",
+    ":discount": 0
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Order insert executed successfully - []
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Order ID retrieved - {
+    "order_id": "33"
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Processing order items - {
+    "items": [
+        {
+            "ItemName": "Cheeseburger",
+            "ItemPrice": "99.00",
+            "ItemQuantity": "1"
+        }
+    ]
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Processing order item - {
+    "item_name": "Cheeseburger",
+    "item_id": 1,
+    "quantity": "1",
+    "subtotal": 99
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] DEBUG: Order detail inserted - {
+    "detail_id": "19"
+}
+[17-Jun-2025 16:03:13 Europe/Berlin] Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+[17-Jun-2025 16:03:13 Europe/Berlin] Sending response - Status: 200, Message: Order placed successfully
+[17-Jun-2025 16:03:13 Europe/Berlin] Response data: Array
+(
+    [order_id] => 33
+    [receipt_url] => generate_receipt.php?order_id=33
+    [receipt_html] => Error generating receipt: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'c.phone' in 'field list'
+)
+

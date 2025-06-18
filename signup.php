@@ -7,12 +7,16 @@ if (!$conn) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $first_name = $_POST['first_name'];
-  $last_name = $_POST['last_name'];
-  $phone_number = $_POST['phone_number'];
-  $birthdate = $_POST['birthdate'];
-  $username = $_POST['username'];
-  $email = $_POST['email'];
+  // Sanitize and validate input
+  $first_name = trim($_POST['first_name']);
+  $last_name = trim($_POST['last_name']);
+  $phone_number = trim($_POST['phone_number']);
+  $birthdate = trim($_POST['birthdate']);
+  $username = trim($_POST['username']);
+  $email = trim($_POST['email']);
+  $street = trim($_POST['street']);
+  $city = trim($_POST['city']);
+  $postal_code = trim($_POST['postal_code']);
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Secure password
 
   $insertUser = mysqli_prepare($conn, "INSERT INTO users (username, password, email, role) VALUES (?, ?, ?, 'customer')");
@@ -25,12 +29,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $user_id = mysqli_insert_id($conn);
 
 
-  $insertCustomer = mysqli_prepare($conn, "INSERT INTO customer (user_id, first_name, last_name, phone_number, birthdate, email) VALUES (?, ?, ?, ?, ?, ?)");
+  // Insert into customer table with address components
+  $insertCustomer = mysqli_prepare($conn, "INSERT INTO customer (user_id, first_name, last_name, phone_number, birthdate, email, street, city, postal_code) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
   if (!$insertCustomer) {
     die("Prepare failed for customers: " . mysqli_error($conn));
   }
-  mysqli_stmt_bind_param($insertCustomer, "isssss", $user_id, $first_name, $last_name, $phone_number, $birthdate, $email);
-  mysqli_stmt_execute($insertCustomer);
+  mysqli_stmt_bind_param($insertCustomer, "issssssss", 
+    $user_id, 
+    $first_name, 
+    $last_name, 
+    $phone_number, 
+    $birthdate, 
+    $email, 
+    $street,
+    $city,
+    $postal_code
+  );
+  $result = mysqli_stmt_execute($insertCustomer);
+  
+  if (!$result) {
+    die("Error inserting customer: " . mysqli_error($conn));
+  }
 
   header("Location: login.php?signup=success");
   exit();
@@ -83,12 +103,33 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       font-weight: bold;
     }
 
-    .input-group input {
+    .input-group input,
+    .input-group textarea {
       width: 100%;
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
+      font-family: Arial, sans-serif;
+    }
+    
+    .input-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    
+    .address-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .address-row .input-group {
+      flex: 1;
+    }
+    
+    .address-row .input-group:first-child {
+      flex: 2;
     }
 
     button {
@@ -156,6 +197,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <div class="input-group">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="street">Street Address</label>
+        <input type="text" name="street" id="street" required>
+      </div>
+
+      <div class="address-row">
+        <div class="input-group">
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" required>
+        </div>
+
+        <div class="input-group">
+          <label for="postal_code">Postal Code</label>
+          <input type="text" name="postal_code" id="postal_code" required>
+        </div>
       </div>
 
       <div class="input-group">

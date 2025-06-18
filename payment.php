@@ -223,11 +223,11 @@ if (empty($itemDetails)) {
   <nav class="sidebar">
     <h2>FastBite</h2>
     <ul>
-      <li><a href="customer-dashboard.php">Home</a></li>
-      <li><a href="menu.php">Menu</a></li>
-      <li><a href="track-order.php">Orders</a></li>
-      <li><a href="profile.php">Profile</a></li>
-      <li><a href="logout.php">Log out</a></li>
+      <li><a href="customer-dashboard.php"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="menu.php"><i class="fas fa-utensils"></i> Menu</a></li>
+      <li><a href="customer-orders.php" class="active"><i class="fas fa-clipboard-list"></i> Track My Orders</a></li>
+      <li><a href="profile.php"><i class="fas fa-user"></i> Profile</a></li>
+      <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
     </ul>
   </nav>
 
@@ -359,6 +359,17 @@ if (empty($itemDetails)) {
       submitBtn.disabled = true;
       submitBtn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Processing...';
 
+      // Include the receipt modal script
+      const receiptModalScript = document.createElement('script');
+      receiptModalScript.src = 'js/receipt-modal.js';
+      document.head.appendChild(receiptModalScript);
+      
+      // Include Font Awesome for icons
+      const fontAwesome = document.createElement('link');
+      fontAwesome.rel = 'stylesheet';
+      fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+      document.head.appendChild(fontAwesome);
+
       fetch("process-payment.php", {
         method: "POST",
         headers: { 
@@ -375,9 +386,17 @@ if (empty($itemDetails)) {
           throw new Error(data.message || 'Payment failed');
         }
         
-        if (data.status === 'success' && data.data.redirect) {
-          // Redirect to receipt page on success
-          window.location.href = data.data.redirect;
+        if (data.status === 'success') {
+          // Show receipt modal with order details
+          showReceiptModal(
+            data.data.order_id, 
+            data.data.receipt_url || `generate_receipt.php?order_id=${data.data.order_id}`
+          );
+          
+          // Clear the cart after successful payment
+          if (typeof clearCart === 'function') {
+            clearCart();
+          }
         } else {
           throw new Error(data.message || 'Invalid response from server');
         }

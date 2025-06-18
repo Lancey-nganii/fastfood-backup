@@ -10,7 +10,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'customer') {
 $customer_id = $_SESSION['user_id'];
 
 // Fetch orders for display using PDO
-$stmt = $dbh->prepare("SELECT o.order_id, o.order_date, o.order_status, o.total_amount FROM `order` o WHERE o.customer_id = ? ORDER BY o.order_date DESC");
+$stmt = $dbh->prepare("SELECT o.order_id, o.order_date, o.status, o.total_amount, o.payment_method, o.delivery_address 
+    FROM `order` o 
+    WHERE o.customer_id = ? 
+    ORDER BY o.order_date DESC");
 $stmt->execute([$customer_id]);
 $orders_result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -19,23 +22,47 @@ foreach ($orders_result as $row) {
     $order_id = $row['order_id'];
 
     // Fetch order items for each order
-    $item_stmt = $dbh->prepare("SELECT m.item_name, od.quantity FROM order_details od JOIN menu m ON od.item_id = m.item_id WHERE od.order_id = ?");
+    $item_stmt = $dbh->prepare("SELECT m.item_name, od.quantity, od.subtotal 
+        FROM order_details od 
+        JOIN menu m ON od.item_id = m.item_id 
+        WHERE od.order_id = ?");
     $item_stmt->execute([$order_id]);
     $items_result = $item_stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $items = [];
+    $total_items = 0;
     foreach ($items_result as $item) {
         $items[] = [
             'name' => $item['item_name'],
-            'quantity' => (int)$item['quantity']
+            'quantity' => (int)$item['quantity'],
+            'subtotal' => (float)$item['subtotal']
         ];
+        $total_items += (int)$item['quantity'];
     }
+
+    // Get the latest status update
+    $status_stmt = $dbh->prepare("SELECT status, status_date, notes 
+        FROM order_status 
+        WHERE order_id = ? 
+        ORDER BY status_date DESC 
+        LIMIT 1");
+    $status_stmt->execute([$order_id]);
+    $status_info = $status_stmt->fetch(PDO::FETCH_ASSOC);
+    
+    $current_status = $status_info ? strtolower($status_info['status']) : 'pending';
+    $status_date = $status_info ? $status_info['status_date'] : $row['order_date'];
+    $status_notes = $status_info ? $status_info['notes'] : '';
 
     $orders[] = [
         'id' => $row['order_id'],
         'date' => $row['order_date'],
-        'status' => strtolower($row['order_status']),
+        'status' => $current_status,
+        'status_date' => $status_date,
+        'status_notes' => $status_notes,
         'total' => (float)$row['total_amount'],
+        'payment_method' => $row['payment_method'],
+        'delivery_address' => $row['delivery_address'],
+        'total_items' => $total_items,
         'items' => $items
     ];
 }

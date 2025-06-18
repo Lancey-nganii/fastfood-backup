@@ -315,17 +315,31 @@ try {
             }
         }
         
-        // Clear cart
+        // If we get here, everything was successful
+        $dbh->commit();
+        
+        // Generate receipt HTML
+        ob_start();
+        include 'generate_receipt.php';
+        $receiptHtml = generateReceipt($dbh, $order_id, false);
+        
+        // Save receipt to file (optional)
+        $receiptDir = __DIR__ . '/receipts';
+        if (!file_exists($receiptDir)) {
+            mkdir($receiptDir, 0755, true);
+        }
+        $receiptFile = $receiptDir . '/receipt_' . $order_id . '_' . time() . '.html';
+        file_put_contents($receiptFile, $receiptHtml);
+        
+        // Clear the cart
         unset($_SESSION['cart']);
         
-        // Commit transaction
-        $dbh->commit();
-        log_debug('Transaction committed successfully', ['order_id' => $order_id]);
-        
-        // Return success
+        // Return success response with receipt URL
+        $receiptUrl = 'generate_receipt.php?order_id=' . $order_id;
         sendResponse(200, 'Order placed successfully', [
             'order_id' => $order_id,
-            'redirect' => 'receipt.php?order_id=' . $order_id
+            'receipt_url' => $receiptUrl,
+            'receipt_html' => $receiptHtml // Include the receipt HTML in the response
         ]);
         
     } catch (Exception $e) {
